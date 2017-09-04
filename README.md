@@ -6,4 +6,6 @@ laughter outburst using Sentiment Analysis, Audio Processing and Statistical Tes
 
 - We used Live At The Apollo S11E01 for this proof of concept study.
 
+- The presentation can be viewed here: https://goo.gl/T8JiUt
+
 - The results were presented at the 7th annual Humor Research Conference (HRC) 2017 in Dallas, Texas, USA
