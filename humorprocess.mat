@@ -1,0 +1,50 @@
+%Research methods
+
+%%
+%Load audio https://se.mathworks.com/matlabcentral/answers/22112-how-to-plot-wav-file
+[y,fs] = audioread('C:\Users\Anotherpc\Documents\MATLAB\test2.wav');
+%%
+%Visualize audio
+y = abs(y(:,1));
+dt = 1/fs;
+t = 0:dt:(length(y)*dt)-dt;
+plot(t,y); xlabel('Seconds'); ylabel('Amplitude');
+
+%Might not be necessary!
+%
+%figure
+%plot(pwelch(periodogram,y,'Fs',fs,'NFFT',length(y)));
+
+%%
+%Load CSV with jokes / polarity and timestamps (use the import data
+%feature)
+
+%csvread('C:\Users\Anotherpc\Documents\MATLAB\preprocessedhumor.csv',1);
+
+%%
+%find time difference between one joke and the other (>0)
+
+%test
+mean(y((round(endtimems(13)/1000))*fs:round((starttimems(14)/1000))*fs));
+median(y((round(endtimems(13)/1000))*fs:round((starttimems(14)/1000))*fs));%test
+%test over
+
+%%
+%compute mean in time slots with no srts (assumed to be laughter)
+
+%use datapoints in y to measure avg amplitude over a periode of time.
+%(datapoints within endtime(i)*44100 to starttime(i+1)*44100) measure mean
+%of them
+%initiate array of means
+meanamp = zeros(length(polarity),1);
+
+for i = 1:length(polarity)-1
+    %meanamp(i) = mean(y((round(endtimems(i)/1000))*fs:round((starttimems(i+1)/1000))*fs));
+    i
+    meanamp(i) = mean(y((round(endtimems(i)))*fs/1000:round((starttimems(i+1)))*fs/1000));
+
+end
+%meanamp(length(polarity)) = 0;
+%use a for loop from 1,...,n-1
+%compute time difference of 
+%compute average laughter if time
