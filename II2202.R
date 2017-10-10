@@ -64,7 +64,7 @@ converttime <- function(string){
   onemilsec <- as.numeric(substring(string,10,10))
   tenmilsec <- as.numeric(substring(string,11,11))
   hunmilsec <- as.numeric(substring(string,12,12))
-  #milsec <- substring(string,10,13)
+  #milsec <- substring(string,10,13).
   
   inmsecs <- onemilsec + tenmilsec*10 + hunmilsec*100 + onesec*1000 + tensec*10*1000 + onemin*60*1000 + tenmin*60*1000*10 #+ onehr*60*60*60
   return(inmsecs)
