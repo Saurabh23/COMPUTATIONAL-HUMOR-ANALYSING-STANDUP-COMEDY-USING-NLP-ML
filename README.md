@@ -1,5 +1,5 @@
 # COMPUTATIONAL-HUMOR-ANALYSING-STANDUP-COMEDY-USING-NLP-ML
-Sentiment Analysis of Standup Comedy closed captions and audio.
+Sentiment Analysis of Standup Comedy  audio and closed captions.
 
 - We Quantitatively measured the effect of positive and negative language-use in jokes on the duration and amplitude of the following
 laughter outburst using Sentiment Analysis, Audio Processing and Statistical Tests.
